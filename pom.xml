@@ -16,16 +16,33 @@
     </dependency>
 
     <dependency>
-    <groupId>nl.hu.bep.friendspammerhelper</groupId>
-    <artifactId>friendspammer-helper</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <scope>system</scope>
-    <systemPath>C:/Users/Dima/IdeaProjects/friendspammer-helper/target/friendspammer-helper-1.0-SNAPSHOT.jar</systemPath>
+      <groupId>nl.hu.bep.friendspammerhelper</groupId>
+      <artifactId>friendspammer-helper</artifactId>
+      <version>1.0-SNAPSHOT</version>
     </dependency>
   </dependencies>
 
 
   <build>
     <finalName>friendspammer-web</finalName>
+    <extensions>
+    <extension>
+      <groupId>io.packagecloud.maven.wagon</groupId>
+      <artifactId>maven-packagecloud-wagon</artifactId>
+      <version>0.0.6</version>
+    </extension>
+  </extensions>
+
   </build>
+
+  <distributionManagement>
+    <repository>
+      <id>packagecloud-DmytroS</id>
+      <url>packagecloud+https://packagecloud.io/DmytroS/friendspammerhelperrepo</url>
+    </repository>
+    <snapshotRepository>
+      <id>packagecloud-DmytroS</id>
+      <url>packagecloud+https://packagecloud.io/DmytroS/friendspammerhelperrepo</url>
+    </snapshotRepository>
+  </distributionManagement>
 </project>
